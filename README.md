@@ -29,7 +29,7 @@ To use the Random Number Generator locally, follow these steps:
 
 1. Clone this repository to your local machine:
    ```bash
-   [git clone https://github.com/istbega/number.gen]
+   git clone https://github.com/istbega/number.gen
 
 Open the project folder and open index.html in your browser to use the generator.
 
