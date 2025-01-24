@@ -1,3 +1,9 @@
+/* Убираем подчеркивание с ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Фон с градиентом, который плавно переливается */
 body {
   font-family: 'Poppins', sans-serif; /* Применение шрифта Poppins */
   margin: 0;
@@ -8,8 +14,10 @@ body {
   background: linear-gradient(45deg, #2c3e50, #34495e, #1abc9c, #8e44ad, #2d3436);
   background-size: 400% 400%;
   animation: gradientAnimation 12s ease infinite;
+  padding: 0 20px; /* Добавляем отступы по бокам */
 }
 
+/* Контейнер с генератором */
 .container {
   background-color: rgba(255, 255, 255, 0.9);  /* Легкая прозрачность */
   padding: 40px 40px;
@@ -21,6 +29,7 @@ body {
   transition: transform 0.3s ease;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
+  margin-top: -50px; /* Поднимаем блок выше */
 }
 
 /* Эффект при наведении */
@@ -38,15 +47,8 @@ h1 {
   animation: slideInFromLeft 1s ease-out forwards;
 }
 
-label {
-  display: block;
-  margin: 12px 0 8px;
-  font-weight: bold;
-  color: #b0bec5; /* Легкий серый */
-  font-size: 16px;
-}
-
-input[type="number"], input[type="checkbox"] {
+/* Ввод данных */
+input[type="number"], input[type="checkbox"], button {
   width: 100%;
   padding: 12px;
   margin-bottom: 18px;
@@ -137,8 +139,9 @@ button:hover {
 /* Стили для иконок социальных сетей */
 .social-icons {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  bottom: 20px; /* Ставим иконки внизу */
+  left: 45%;
+  transform: translateX(-50%); /* Центрируем по горизонтали */
   display: flex;
   gap: 15px;
   opacity: 0; /* Начальная прозрачность */
@@ -149,11 +152,17 @@ button:hover {
 @keyframes iconsFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20px); /* Сдвигаем иконки вверх */
+    transform: translateY(20px); /* Сдвигаем иконки вверх */
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    display: none; /* Скрываем иконки на мобильных */
   }
 }
 
@@ -176,6 +185,3 @@ button:hover {
   transform: scale(1.1);
 }
 
-.instagram { background-color: #333; }
-.telegram { background-color: #333; }
-.github { background-color: #333; }
