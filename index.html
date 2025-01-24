@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Подключение Font Awesome для иконок -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Иконки социальных сетей -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/istbega?igsh=MXhjc2kyeGtsdHBxZw%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://t.me/istbegaa" target="_blank" class="social-icon telegram">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="https://github.com/istbega" target="_blank" class="social-icon github">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>Random Number Generator</h1>
+
+    <label for="minValue">Minimum Value:</label>
+    <input type="number" id="minValue" value="1">
+
+    <label for="maxValue">Maximum Value:</label>
+    <input type="number" id="maxValue" value="100">
+
+    <label for="count">Number of Numbers:</label>
+    <input type="number" id="count" value="1" min="1" max="10">
+
+    <label for="unique">Unique Numbers?</label>
+    <input type="checkbox" id="unique" checked>
+
+    <button id="generateButton">Generate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

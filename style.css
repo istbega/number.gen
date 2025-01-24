@@ -1,0 +1,181 @@
+body {
+  font-family: 'Poppins', sans-serif; /* Применение шрифта Poppins */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #2c3e50, #34495e, #1abc9c, #8e44ad, #2d3436);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);  /* Легкая прозрачность */
+  padding: 40px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  backdrop-filter: blur(12px); /* Размытие фона */
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Эффект при наведении */
+.container:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #404750; /* Светло-серый цвет */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+label {
+  display: block;
+  margin: 12px 0 8px;
+  font-weight: bold;
+  color: #b0bec5; /* Легкий серый */
+  font-size: 16px;
+}
+
+input[type="number"], input[type="checkbox"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: border-color 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+input[type="number"]:focus, input[type="checkbox"]:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #ffffff;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #34495e;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Плавное появление */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Анимация текста при появлении */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Анимация плавного градиента */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Стили для иконок социальных сетей */
+.social-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  opacity: 0; /* Начальная прозрачность */
+  animation: iconsFadeIn 1s ease-out forwards; /* Добавление анимации */
+}
+
+/* Плавное появление иконок */
+@keyframes iconsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Сдвигаем иконки вверх */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Единый фон */
+  color: white;
+  font-size: 24px;
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.instagram { background-color: #333; }
+.telegram { background-color: #333; }
+.github { background-color: #333; }
